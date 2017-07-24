@@ -1446,6 +1446,7 @@
 			<array>
 				<string>xnu-3789.51.2.fix-path.patch</string>
 				<string>xnu-3789.51.2.fix-codesign.p1.patch</string>
+				<string>xnu-3789.51.2.fix-prototype.p1.patch</string>
 			</array>
 		</dict>
 		<key>libkxld</key>
