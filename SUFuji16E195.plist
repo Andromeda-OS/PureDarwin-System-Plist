@@ -615,20 +615,10 @@
 			<key>version</key>
 			<string>268</string>
 		</dict>
-		<key>autoconf</key>
-		<dict>
-			<key>version</key>
-			<string>2.69</string>
-		</dict>
 		<key>autofs</key>
 		<dict>
 			<key>version</key>
 			<string>259.30.2</string>
-		</dict>
-		<key>automake</key>
-		<dict>
-			<key>version</key>
-			<string>1.15.1</string>
 		</dict>
 		<key>awk</key>
 		<dict>
