@@ -807,6 +807,11 @@
 			<key>version</key>
 			<string>719.50.1</string>
 		</dict>
+		<key>freetype</key>
+		<dict>
+			<key>version</key>
+			<string>2.4.0</string>
+		</dict>
 		<key>gnudiff</key>
 		<dict>
 			<key>version</key>
@@ -861,6 +866,18 @@
 		<dict>
 			<key>version</key>
 			<string>305.20.1</string>
+		</dict>
+		<key>jdk</key>
+		<dict>
+			<key>version</key>
+			<string>8.141.15</string>
+			<key>dependencies</key>
+			<dict>
+				<key>build</key>
+				<array>
+					<string>freetype</string>
+				</array>
+			</dict>
 		</dict>
 		<key>kext_tools</key>
 		<dict>
