@@ -821,6 +821,13 @@
 		<dict>
 			<key>version</key>
 			<string>2.8</string>
+			<key>dependencies</key>
+			<dict>
+				<key>build</key>
+				<array>
+					<string>gnulibtool</string>
+				</array>
+			</dict>
 		</dict>
 		<key>gnudiff</key>
 		<dict>
