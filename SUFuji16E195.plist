@@ -810,7 +810,7 @@
 		<key>freetype</key>
 		<dict>
 			<key>version</key>
-			<string>2.4.0</string>
+			<string>2.8</string>
 		</dict>
 		<key>gnudiff</key>
 		<dict>
