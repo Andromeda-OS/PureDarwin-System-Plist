@@ -867,7 +867,7 @@
 			<key>version</key>
 			<string>305.20.1</string>
 		</dict>
-		<key>jdk</key>
+		<key>jdk8u</key>
 		<dict>
 			<key>version</key>
 			<string>8.141.15</string>
