@@ -891,6 +891,11 @@
 				</array>
 			</dict>
 		</dict>
+		<key>jdk8u_bootstrap</key>
+		<dict>
+			<key>version</key>
+			<string>8.141.15</string>
+		</dict>
 		<key>kext_tools</key>
 		<dict>
 			<key>version</key>
