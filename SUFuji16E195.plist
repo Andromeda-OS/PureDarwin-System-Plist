@@ -888,6 +888,7 @@
 				<key>build</key>
 				<array>
 					<string>freetype</string>
+					<string>jdk8u_bootstrap</string>
 				</array>
 			</dict>
 		</dict>
@@ -895,6 +896,23 @@
 		<dict>
 			<key>version</key>
 			<string>8.141.15</string>
+			<key>original</key>
+			<string>jdk8u</string>
+		</dict>
+		<key>jre8u</key>
+		<dict>
+			<key>version</key>
+			<string>8.141.15</string>
+			<key>original</key>
+			<string>jdk8u</string>
+			<key>dependencies</key>
+			<dict>
+				<key>build</key>
+				<array>
+					<string>freetype</string>
+					<string>jdk8u_bootstrap</string>
+				</array>
+			</dict>
 		</dict>
 		<key>kext_tools</key>
 		<dict>
