@@ -882,7 +882,7 @@
 		<key>jdk8u</key>
 		<dict>
 			<key>version</key>
-			<string>8.141.15</string>
+			<string>141.15</string>
 			<key>dependencies</key>
 			<dict>
 				<key>build</key>
@@ -895,14 +895,14 @@
 		<key>jdk8u_bootstrap</key>
 		<dict>
 			<key>version</key>
-			<string>8.141.15</string>
+			<string>141.15</string>
 			<key>original</key>
 			<string>jdk8u</string>
 		</dict>
 		<key>jre8u</key>
 		<dict>
 			<key>version</key>
-			<string>8.141.15</string>
+			<string>141.15</string>
 			<key>original</key>
 			<string>jdk8u</string>
 			<key>dependencies</key>
