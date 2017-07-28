@@ -899,7 +899,7 @@
 			<key>original</key>
 			<string>jdk8u</string>
 		</dict>
-		<key>jre8u</key>
+		<key>jdk8u_jre</key>
 		<dict>
 			<key>version</key>
 			<string>141.15</string>
