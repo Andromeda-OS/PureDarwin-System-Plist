@@ -91,7 +91,7 @@
 		<key>booter</key>
 		<dict>
 			<key>version</key>
-			<string>3</string>
+			<string>3.1.1</string>
 			<key>target</key>
 			<string>boot2</string>
 			<key>github</key>
@@ -184,7 +184,7 @@
 		<key>AppleI386GenericPlatform</key>
 		<dict>
 			<key>version</key>
-			<string>10.0</string>
+			<string>11.0</string>
 			<key>github</key>
 			<string>Andromeda-OS/AppleI386GenericPlatform</string>
 			<key>environment</key>
@@ -298,6 +298,8 @@
 		<dict>
 			<key>version</key>
 			<string>1150.3</string>
+			<key>github</key>
+			<string>Andromeda-OS/corecrypto</string>
 		</dict>
 		<key>ICU</key>
 		<dict>
@@ -706,7 +708,7 @@
 		<key>cdrtools</key>
 		<dict>
 			<key>version</key>
-			<string>3.02</string>
+			<string>3.02.0.0.1</string>
 			<key>github</key>
 			<string>Andromeda-OS/cdrtools</string>
 			<key>dependencies</key>
@@ -1505,6 +1507,7 @@
 				<string>xnu-3789.51.2.xcode9-warnings.p1.patch</string>
 				<string>xnu-3789.51.2.copyright-check.p1.patch</string>
 				<string>xnu-3789.51.2.paths.p1.patch</string>
+				<string>xnu-3789.51.2.firehose-buildroot.p1.patch</string>
 			</array>
 		</dict>
 		<key>xnu_headers</key>
