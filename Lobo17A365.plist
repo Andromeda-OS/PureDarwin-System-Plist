@@ -2,23 +2,25 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-
 	<key>source_sites</key>
 	<array>
 		<string>https://opensource.apple.com/tarballs</string>
 	</array>
+
 	<key>patch_sites</key>
 	<array>
 		<string>http://67.205.155.153/Patches</string>
 		<string>https://github.com/csekel/darwinbuild/raw/master/patches</string>
-		<string>https://github.com/Andromeda-OS/darwinbuild/raw/master/patches</string>
+		<string>https://github.com/Andromeda-OS/PureDarwin-System-Plist/raw/master/patches</string>
 	</array>
+
 	<key>build</key>
 	<string>Lobo17A365</string>
 	<key>darwin</key>
 	<string>Darwin 17</string>
 	<key>macosx</key>
 	<string>macOS 10.13</string>
+
 	<key>environment</key>
 	<dict>
 		<key>INSTALLED_PRODUCT_ASIDES</key>
@@ -53,7 +55,6 @@
 		<string>MacOSX</string>
 		<key>SDKROOT</key>
 		<string>macosx10.13</string>
-
 	</dict>
 
 	<key>groups</key>
@@ -67,6 +68,7 @@
 			<string>xnu AppleI386GenericPlatform corecrypto booter</string>
 		</array>
 	</dict>
+
 	<key>projects</key>
 	<dict>
 		<key>AppleFileSystemDriver</key>
@@ -554,6 +556,19 @@
 			<key>version</key>
 			<string>262</string>
 		</dict>
+		<key>dtrace_host</key>
+		<dict>
+			<key>version</key>
+			<string>262</string>
+			<key>original</key>
+			<string>dtrace</string>
+			<key>target</key>
+			<string>dtrace_host</string>
+			<key>patchfiles</key>
+			<array>
+				<string>dtrace-262.install-paths.p1.patch</string>
+			</array>
+		</dict>
 		<key>dyld</key>
 		<dict>
 			<key>version</key>
@@ -723,6 +738,22 @@
 		<dict>
 			<key>version</key>
 			<string>161</string>
+			<key>dependencies</key>
+			<dict>
+				<key>header</key>
+				<array>
+					<string>xnu_headers</string>
+				</array>
+			</dict>
+		</dict>
+		<key>libplatform_headers</key>
+		<dict>
+			<key>version</key>
+			<string>161</string>
+			<key>original</key>
+			<string>libplatform</string>
+			<key>target</key>
+			<string>headers</string>
 		</dict>
 		<key>libpthread</key>
 		<dict>
@@ -1053,6 +1084,37 @@
 		<dict>
 			<key>version</key>
 			<string>4570.1.46</string>
+		</dict>
+		<key>xnu_headers</key>
+		<dict>
+			<key>environment</key>
+			<dict>
+				<key>RC_ARCHS</key>
+				<string>x86_64</string>
+				<key>KERNEL_CONFIGS</key>
+				<string>RELEASE</string>
+			</dict>
+			<key>original</key>
+			<string>xnu</string>
+			<key>version</key>
+			<string>4570.1.46</string>
+			<key>dependencies</key>
+			<dict>
+				<key>header</key>
+				<array>
+					<string>AvailabilityVersions</string>
+				</array>
+				<key>build</key>
+				<array>
+					<string>dtrace_host</string>
+				</array>
+			</dict>
+			<key>patchfiles</key>
+			<array>
+				<string>xnu-4570.1.46.availability-path.p1.patch</string>
+				<string>xnu-4570.1.46.dtrace-host.p1.patch</string>
+				<string>xnu-4570.1.46.fix-codesign.p1.patch</string>
+			</array>
 		</dict>
 		<key>zip</key>
 		<dict>
