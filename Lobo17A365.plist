@@ -2,23 +2,25 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-
 	<key>source_sites</key>
 	<array>
 		<string>https://opensource.apple.com/tarballs</string>
 	</array>
+
 	<key>patch_sites</key>
 	<array>
 		<string>http://67.205.155.153/Patches</string>
 		<string>https://github.com/csekel/darwinbuild/raw/master/patches</string>
-		<string>https://github.com/Andromeda-OS/darwinbuild/raw/master/patches</string>
+		<string>https://github.com/Andromeda-OS/PureDarwin-System-Plist/raw/master/patches</string>
 	</array>
+
 	<key>build</key>
 	<string>Lobo17A365</string>
 	<key>darwin</key>
 	<string>Darwin 17</string>
 	<key>macosx</key>
 	<string>macOS 10.13</string>
+
 	<key>environment</key>
 	<dict>
 		<key>INSTALLED_PRODUCT_ASIDES</key>
@@ -53,7 +55,6 @@
 		<string>MacOSX</string>
 		<key>SDKROOT</key>
 		<string>macosx10.13</string>
-
 	</dict>
 
 	<key>groups</key>
@@ -67,12 +68,32 @@
 			<string>xnu AppleI386GenericPlatform corecrypto booter</string>
 		</array>
 	</dict>
+
 	<key>projects</key>
 	<dict>
 		<key>AppleFileSystemDriver</key>
 		<dict>
 			<key>version</key>
 			<string>23</string>
+		</dict>
+		<key>AppleI386GenericPlatform</key>
+		<dict>
+			<key>version</key>
+			<string>11.0</string>
+			<key>github</key>
+			<string>Andromeda-OS/AppleI386GenericPlatform</string>
+			<key>dependencies</key>
+			<dict>
+				<key>header</key>
+				<array>
+					<string>xnu_headers</string>
+				</array>
+			</dict>
+			<key>environment</key>
+			<dict>
+				<key>RC_ARCHS</key>
+				<string>x86_64</string>
+			</dict>
 		</dict>
 		<key>AppleRAID</key>
 		<dict>
@@ -98,6 +119,13 @@
 		<dict>
 			<key>version</key>
 			<string>128</string>
+		</dict>
+		<key>CarbonHeaders</key>
+		<dict>
+			<key>version</key>
+			<string>100</string>
+			<key>github</key>
+			<string>Andromeda-OS/CarbonHeaders</string>
 		</dict>
 		<key>CF</key>
 		<dict>
@@ -469,6 +497,20 @@
 			<key>version</key>
 			<string>7604.1.38.1.6</string>
 		</dict>
+		<key>booter</key>
+		<dict>
+			<key>environment</key>
+			<dict>
+				<key>RC_ARCHS</key>
+				<string>i386</string>
+			</dict>
+			<key>version</key>
+			<string>3.1.1</string>
+			<key>target</key>
+			<string>boot2</string>
+			<key>github</key>
+			<string>Andromeda-OS/booter</string>
+		</dict>
 		<key>bootp</key>
 		<dict>
 			<key>version</key>
@@ -489,6 +531,20 @@
 			<key>version</key>
 			<string>263</string>
 		</dict>
+		<key>cdrtools</key>
+		<dict>
+			<key>version</key>
+			<string>3.02.0.0.1</string>
+			<key>github</key>
+			<string>Andromeda-OS/cdrtools</string>
+			<key>dependencies</key>
+			<dict>
+				<key>build</key>
+				<array>
+					<string>schilymake</string>
+				</array>
+			</dict>
+		</dict>
 		<key>configd</key>
 		<dict>
 			<key>version</key>
@@ -503,6 +559,20 @@
 		<dict>
 			<key>version</key>
 			<string>155</string>
+		</dict>
+		<key>corecrypto</key>
+		<dict>
+			<key>version</key>
+			<string>1150.3</string>
+			<key>github</key>
+			<string>Andromeda-OS/corecrypto</string>
+			<key>dependencies</key>
+			<dict>
+				<key>header</key>
+				<array>
+					<string>xnu_headers</string>
+				</array>
+			</dict>
 		</dict>
 		<key>cron</key>
 		<dict>
@@ -553,6 +623,19 @@
 		<dict>
 			<key>version</key>
 			<string>262</string>
+		</dict>
+		<key>dtrace_host</key>
+		<dict>
+			<key>version</key>
+			<string>262</string>
+			<key>original</key>
+			<string>dtrace</string>
+			<key>target</key>
+			<string>dtrace_host</string>
+			<key>patchfiles</key>
+			<array>
+				<string>dtrace-262.install-paths.p1.patch</string>
+			</array>
 		</dict>
 		<key>dyld</key>
 		<dict>
@@ -694,6 +777,28 @@
 			<key>version</key>
 			<string>18.1</string>
 		</dict>
+		<key>libfirehose_kernel</key>
+		<dict>
+			<key>version</key>
+			<string>913.1.6</string>
+			<key>original</key>
+			<string>libdispatch</string>
+			<key>target</key>
+			<string>libfirehose_kernel</string>
+			<key>patchfiles</key>
+			<array>
+				<string>libdispatch-913.1.6.libfirehose-kernel.p1.patch</string>
+			</array>
+			<key>dependencies</key>
+			<dict>
+				<key>header</key>
+				<array>
+					<string>xnu_headers</string>
+					<string>libplatform_headers</string>
+					<string>CarbonHeaders</string>
+				</array>
+			</dict>
+		</dict>
 		<key>libfs</key>
 		<dict>
 			<key>version</key>
@@ -723,6 +828,21 @@
 		<dict>
 			<key>version</key>
 			<string>161</string>
+			<key>dependencies</key>
+			<dict>
+				<key>header</key>
+				<array>
+					<string>xnu_headers</string>
+					<string>libplatform_headers</string>
+				</array>
+			</dict>
+		</dict>
+		<key>libplatform_headers</key>
+		<dict>
+			<key>version</key>
+			<string>161</string>
+			<key>original</key>
+			<string>libplatform</string>
 		</dict>
 		<key>libpthread</key>
 		<dict>
@@ -924,6 +1044,13 @@
 			<key>version</key>
 			<string>131</string>
 		</dict>
+		<key>schilymake</key>
+		<dict>
+			<key>version</key>
+			<string>1.2.5</string>
+			<key>github</key>
+			<string>Andromeda-OS/schilymake</string>
+		</dict>
 		<key>screen</key>
 		<dict>
 			<key>version</key>
@@ -1051,8 +1178,70 @@
 		</dict>
 		<key>xnu</key>
 		<dict>
+			<key>environment</key>
+			<dict>
+				<key>RC_ARCHS</key>
+				<string>x86_64</string>
+				<key>KERNEL_CONFIGS</key>
+				<string>RELEASE</string>
+			</dict>
 			<key>version</key>
 			<string>4570.1.46</string>
+			<key>dependencies</key>
+			<dict>
+				<key>header</key>
+				<array>
+					<string>AvailabilityVersions</string>
+				</array>
+				<key>build</key>
+				<array>
+					<string>AvailabilityVersions</string>
+					<string>dtrace_host</string>
+					<string>libfirehose_kernel</string>
+				</array>
+			</dict>
+			<key>patchfiles</key>
+			<array>
+				<string>xnu-4570.1.46.availability-path.p1.patch</string>
+				<string>xnu-4570.1.46.dtrace-host.p1.patch</string>
+				<string>xnu-4570.1.46.fix-codesign.p1.patch</string>
+				<string>xnu-4570.1.46.system-framework.p1.patch</string>
+				<string>xnu-4570.1.46.copyright-check.p1.patch</string>
+				<string>xnu-4570.1.46.firehose-buildroot.p1.patch</string>
+				<string>xnu-4570.1.46.xcode9-warnings.p1.patch</string>
+			</array>
+		</dict>
+		<key>xnu_headers</key>
+		<dict>
+			<key>environment</key>
+			<dict>
+				<key>RC_ARCHS</key>
+				<string>x86_64</string>
+				<key>KERNEL_CONFIGS</key>
+				<string>RELEASE</string>
+			</dict>
+			<key>original</key>
+			<string>xnu</string>
+			<key>version</key>
+			<string>4570.1.46</string>
+			<key>dependencies</key>
+			<dict>
+				<key>header</key>
+				<array>
+					<string>AvailabilityVersions</string>
+				</array>
+				<key>build</key>
+				<array>
+					<string>dtrace_host</string>
+				</array>
+			</dict>
+			<key>patchfiles</key>
+			<array>
+				<string>xnu-4570.1.46.availability-path.p1.patch</string>
+				<string>xnu-4570.1.46.dtrace-host.p1.patch</string>
+				<string>xnu-4570.1.46.fix-codesign.p1.patch</string>
+				<string>xnu-4570.1.46.system-framework.p1.patch</string>
+			</array>
 		</dict>
 		<key>zip</key>
 		<dict>
