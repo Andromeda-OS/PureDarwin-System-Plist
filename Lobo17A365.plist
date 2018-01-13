@@ -71,6 +71,18 @@
 
 	<key>projects</key>
 	<dict>
+		<key>AppleAPIC</key>
+		<dict>
+			<key>version</key>
+			<string>10</string>
+			<key>github</key>
+			<string>Andromeda-OS/AppleAPIC</string>
+			<key>environment</key>
+			<dict>
+				<key>RC_ARCHS</key>
+				<string>x86_64</string>
+			</dict>
+		</dict>
 		<key>AppleFileSystemDriver</key>
 		<dict>
 			<key>version</key>
