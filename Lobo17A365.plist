@@ -66,6 +66,7 @@
 		<key>boot</key>
 		<array>
 			<string>xnu AppleI386GenericPlatform corecrypto booter</string>
+			<string>IOATAFamily AppleIntelPIIXATA</string>
 		</array>
 	</dict>
 
