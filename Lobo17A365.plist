@@ -83,6 +83,29 @@
 				<string>x86_64</string>
 			</dict>
 		</dict>
+		<key>AppleIntelPIIXATA</key>
+		<dict>
+			<key>version</key>
+			<string>300</string>
+			<key>github</key>
+			<string>Andromeda-OS/ApplePIIXATA</string>
+			<key>environment</key>
+			<dict>
+				<key>RC_ARCHS</key>
+				<string>x86_64</string>
+			</dict>
+			<key>dependencies</key>
+			<dict>
+				<key>header</key>
+				<array>
+					<string>xnu_headers</string>
+				</array>
+				<key>build</key>
+				<array>
+					<string>IOATAFamily</string>
+				</array>
+			</dict>
+		</dict>
 		<key>AppleFileSystemDriver</key>
 		<dict>
 			<key>version</key>
@@ -187,7 +210,21 @@
 		<key>IOATAFamily</key>
 		<dict>
 			<key>version</key>
-			<string>255</string>
+			<string>255.0.0.0.1</string>
+			<key>github</key>
+			<string>Andromeda-OS/IOATAFamily</string>
+			<key>dependencies</key>
+			<dict>
+				<key>header</key>
+				<array>
+					<string>xnu_headers</string>
+				</array>
+			</dict>
+			<key>environment</key>
+			<dict>
+				<key>RC_ARCHS</key>
+				<string>x86_64</string>
+			</dict>
 		</dict>
 		<key>IOATAPIProtocolTransport</key>
 		<dict>
