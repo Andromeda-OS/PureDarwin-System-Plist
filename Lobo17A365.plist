@@ -127,10 +127,18 @@
 			<key>github</key>
 			<string>Andromeda-OS/CarbonHeaders</string>
 		</dict>
-		<key>CF</key>
+		<key>CoreFoundation</key>
 		<dict>
 			<key>version</key>
-			<string>1443.13</string>
+			<string>1158.13</string>
+			<key>dependencies</key>
+			<dict>
+				<key>header</key>
+				<array>
+					<string>libdispatch</string>
+					<string>liblaunch</string>
+				</array>
+			</dict>
 		</dict>
 		<key>CPAN</key>
 		<dict>
