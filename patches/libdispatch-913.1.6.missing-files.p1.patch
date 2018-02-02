@@ -1,0 +1,60 @@
+commit 37d0d2539c39ffd0fc4c28a30dc8e9b06157fd92
+Author: William Kent <wjk@users.noreply.github.com>
+Date:   Thu Feb 1 20:15:25 2018 -0500
+
+    Add missing files
+
+diff --git a/os/venture_private.h b/os/venture_private.h
+new file mode 100644
+index 0000000..3ee4c67
+--- /dev/null
++++ b/os/venture_private.h
+@@ -0,0 +1,21 @@
++/*
++ * Copyright (c) 2011-2013 Apple Inc. All rights reserved.
++ *
++ * @APPLE_APACHE_LICENSE_HEADER_START@
++ *
++ * Licensed under the Apache License, Version 2.0 (the "License");
++ * you may not use this file except in compliance with the License.
++ * You may obtain a copy of the License at
++ *
++ *     http://www.apache.org/licenses/LICENSE-2.0
++ *
++ * Unless required by applicable law or agreed to in writing, software
++ * distributed under the License is distributed on an "AS IS" BASIS,
++ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++ * See the License for the specific language governing permissions and
++ * limitations under the License.
++ *
++ * @APPLE_APACHE_LICENSE_HEADER_END@
++ */
++
++// This header intentionally left blank for now.
+diff --git a/src/venture_internal.h b/src/venture_internal.h
+new file mode 100644
+index 0000000..3ee4c67
+--- /dev/null
++++ b/src/venture_internal.h
+@@ -0,0 +1,21 @@
++/*
++ * Copyright (c) 2011-2013 Apple Inc. All rights reserved.
++ *
++ * @APPLE_APACHE_LICENSE_HEADER_START@
++ *
++ * Licensed under the Apache License, Version 2.0 (the "License");
++ * you may not use this file except in compliance with the License.
++ * You may obtain a copy of the License at
++ *
++ *     http://www.apache.org/licenses/LICENSE-2.0
++ *
++ * Unless required by applicable law or agreed to in writing, software
++ * distributed under the License is distributed on an "AS IS" BASIS,
++ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++ * See the License for the specific language governing permissions and
++ * limitations under the License.
++ *
++ * @APPLE_APACHE_LICENSE_HEADER_END@
++ */
++
++// This header intentionally left blank for now.

@@ -761,6 +761,10 @@
 		<dict>
 			<key>version</key>
 			<string>913.1.6</string>
+			<key>patchfiles</key>
+			<array>
+				<string>libdispatch-913.1.6.missing-files.p1.patch</string>
+			</array>
 		</dict>
 		<key>libedit</key>
 		<dict>
