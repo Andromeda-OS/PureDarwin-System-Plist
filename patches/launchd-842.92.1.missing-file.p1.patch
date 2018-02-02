@@ -1,0 +1,16 @@
+commit 991bc963da9fabbbad69465f7953ac873deac483
+Author: William Kent <wjk@users.noreply.github.com>
+Date:   Thu Feb 1 20:26:51 2018 -0500
+
+    Remove include of missing xcconfig file
+
+diff --git a/xcconfigs/common.xcconfig b/xcconfigs/common.xcconfig
+index 8e49809..fb9ffa6 100644
+--- a/xcconfigs/common.xcconfig
++++ b/xcconfigs/common.xcconfig
+@@ -1,5 +1,3 @@
+-#include "<DEVELOPER_DIR>/Makefiles/CoreOS/Xcode/BSD.xcconfig"
+-
+ BUILD_XCSUPPORT_DIR = $(PROJECT_DIR)/xcsupport
+ BUILD_XCSCRIPTS_DIR = $(PROJECT_DIR)/xcscripts
+ BUILD_XCCONFIG_DIR = $(PROJECT_DIR)/xcconfig

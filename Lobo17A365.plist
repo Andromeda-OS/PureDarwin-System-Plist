@@ -737,6 +737,11 @@
 			<key>version</key>
 			<string>25</string>
 		</dict>
+		<key>launchd</key>
+		<dict>
+			<key>version</key>
+			<string>842.92.1</string>
+		</dict>
 		<key>less</key>
 		<dict>
 			<key>version</key>
@@ -817,6 +822,19 @@
 		<dict>
 			<key>version</key>
 			<string>51</string>
+		</dict>
+		<key>liblaunch</key>
+		<dict>
+			<key>version</key>
+			<string>842.92.1</string>
+			<key>original</key>
+			<string>launchd</string>
+			<key>target</key>
+			<string>liblaunch</string>
+			<key>patchfiles</key>
+			<array>
+				<string>launchd-842.92.1.missing-file.p1.patch</string>
+			</array>
 		</dict>
 		<key>libmalloc</key>
 		<dict>
