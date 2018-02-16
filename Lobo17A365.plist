@@ -307,6 +307,17 @@
 			<key>version</key>
 			<string>26</string>
 		</dict>
+		<key>Libsyscall</key>
+		<dict>
+			<key>version</key>
+			<string>4570.41.2</string>
+			<key>original</key>
+			<string>xnu</string>
+			<key>patchfiles</key>
+			<array>
+				<string>xnu-4570.41.2.libsyscall.p1.patch</string>
+			</array>
+		</dict>
 		<key>Libsystem</key>
 		<dict>
 			<key>version</key>
@@ -1202,6 +1213,7 @@
 				<string>xnu-4570.41.2.copyright-check.p1.patch</string>
 				<string>xnu-4570.41.2.firehose-buildroot.p1.patch</string>
 				<string>xnu-4570.41.2.xcode9-warnings.p1.patch</string>
+				<string>xnu-4570.41.2.libsyscall.p1.patch</string>
 			</array>
 		</dict>
 		<key>xnu_headers</key>
