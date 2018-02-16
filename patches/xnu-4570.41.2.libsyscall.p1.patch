@@ -187,3 +187,23 @@ diff -r -U5 xnu-4570.41.2/osfmk/i386/cpu_topology.c xnu-4570.41.2/osfmk/i386/cpu
      void * array,
      size_t nmembers,
      size_t member_size,
+--- a/Makefile
++++ b/Makefile
+@@ -44,11 +44,12 @@ SDKROOT ?= macosx.internal
+ installhdrs install:
+ 	cd libsyscall ; \
+ 		xcodebuild $@ $(TARGET)	\
+-			"SRCROOT=$(SRCROOT)/libsyscall"					\
+-			"OBJROOT=$(OBJROOT)"						\
+-			"SYMROOT=$(SYMROOT)"						\
+-			"DSTROOT=$(DSTROOT)"						\
+-			"SDKROOT=$(SDKROOT)"
++			"SRCROOT=$(SRCROOT)/libsyscall"	\
++			"OBJROOT=$(OBJROOT)" \
++			"SYMROOT=$(SYMROOT)" \
++			"DSTROOT=$(DSTROOT)" \
++			"SDKROOT=$(SDKROOT)" \
++			"ADDITIONAL_SDKS=$(RC_BuildRoot)"
+ 
+ clean:
+ 
