@@ -1179,7 +1179,7 @@
 				<string>RELEASE</string>
 			</dict>
 			<key>version</key>
-			<string>4570.1.46</string>
+			<string>4570.41.2</string>
 			<key>dependencies</key>
 			<dict>
 				<key>header</key>
@@ -1195,13 +1195,13 @@
 			</dict>
 			<key>patchfiles</key>
 			<array>
-				<string>xnu-4570.1.46.availability-path.p1.patch</string>
-				<string>xnu-4570.1.46.dtrace-host.p1.patch</string>
-				<string>xnu-4570.1.46.fix-codesign.p1.patch</string>
-				<string>xnu-4570.1.46.system-framework.p1.patch</string>
-				<string>xnu-4570.1.46.copyright-check.p1.patch</string>
-				<string>xnu-4570.1.46.firehose-buildroot.p1.patch</string>
-				<string>xnu-4570.1.46.xcode9-warnings.p1.patch</string>
+				<string>xnu-4570.41.2.availability-path.p1.patch</string>
+				<string>xnu-4570.41.2.dtrace-host.p1.patch</string>
+				<string>xnu-4570.41.2.fix-codesign.p1.patch</string>
+				<string>xnu-4570.41.2.system-framework.p1.patch</string>
+				<string>xnu-4570.41.2.copyright-check.p1.patch</string>
+				<string>xnu-4570.41.2.firehose-buildroot.p1.patch</string>
+				<string>xnu-4570.41.2.xcode9-warnings.p1.patch</string>
 			</array>
 		</dict>
 		<key>xnu_headers</key>
@@ -1214,7 +1214,7 @@
 			<key>original</key>
 			<string>xnu</string>
 			<key>version</key>
-			<string>4570.1.46</string>
+			<string>4570.41.2</string>
 			<key>dependencies</key>
 			<dict>
 				<key>header</key>
@@ -1228,10 +1228,10 @@
 			</dict>
 			<key>patchfiles</key>
 			<array>
-				<string>xnu-4570.1.46.availability-path.p1.patch</string>
-				<string>xnu-4570.1.46.dtrace-host.p1.patch</string>
-				<string>xnu-4570.1.46.fix-codesign.p1.patch</string>
-				<string>xnu-4570.1.46.system-framework.p1.patch</string>
+				<string>xnu-4570.41.2.availability-path.p1.patch</string>
+				<string>xnu-4570.41.2.dtrace-host.p1.patch</string>
+				<string>xnu-4570.41.2.fix-codesign.p1.patch</string>
+				<string>xnu-4570.41.2.system-framework.p1.patch</string>
 			</array>
 		</dict>
 		<key>zip</key>
