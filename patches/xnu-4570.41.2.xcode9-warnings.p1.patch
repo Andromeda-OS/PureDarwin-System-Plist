@@ -1,8 +1,8 @@
 diff --git a/makedefs/MakeInc.def b/makedefs/MakeInc.def
-index 653af06..f75aefe 100644
+index 584d079..2df3cb6 100644
 --- a/makedefs/MakeInc.def
 +++ b/makedefs/MakeInc.def
-@@ -143,6 +143,7 @@ WARNFLAGS_STD := \
+@@ -143,9 +143,11 @@ WARNFLAGS_STD := \
  	-Wno-partial-availability \
  	-Wno-pedantic \
  	-Wno-shift-sign-overflow \
@@ -10,7 +10,11 @@ index 653af06..f75aefe 100644
  	-Wno-switch-enum \
  	-Wno-undef \
  	-Wno-unused-macros \
-@@ -157,7 +158,11 @@ CWARNFLAGS_STD = \
++	-Wno-unused-variable \
+ 	-Wno-used-but-marked-unused \
+ 	-Wno-variadic-macros \
+ 	-Wno-vla \
+@@ -157,7 +159,11 @@ CWARNFLAGS_STD = \
  	-Wmissing-prototypes \
  	-Wshadow \
  	-Winline \
@@ -23,7 +27,7 @@ index 653af06..f75aefe 100644
  
  # Can be overridden in Makefile.template or Makefile.$arch
  export CWARNFLAGS ?= $(CWARNFLAGS_STD)
-@@ -170,6 +175,7 @@ CXXWARNFLAGS_STD = \
+@@ -170,6 +176,7 @@ CXXWARNFLAGS_STD = \
  	$(WARNFLAGS_STD) \
  	-Wno-c++98-compat-pedantic \
  	-Wno-exit-time-destructors \
