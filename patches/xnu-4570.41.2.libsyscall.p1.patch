@@ -190,4 +190,19 @@
 +			"ADDITIONAL_SDKS=$(RC_BuildRoot)"
  
  clean:
+
+diff --git a/libsyscall/xcodescripts/compile-syscalls.pl b/libsyscall/xcodescripts/compile-syscalls.pl
+index f0c2691..e9ff30e 100755
+--- a/libsyscall/xcodescripts/compile-syscalls.pl
++++ b/libsyscall/xcodescripts/compile-syscalls.pl
+@@ -63,7 +63,10 @@ my @CFLAGS = (
+ 	"-x assembler-with-cpp",
+ 	"-c",
+ 	"-isysroot", $ENV{'SDKROOT'} || "/",
++	"-isysroot", $ENV{'ADDITIONAL_SDKS'} || "/",
+ 	"-I".$ENV{"SDKROOT"}."/System/Library/Frameworks/System.framework/PrivateHeaders",
++	"-I".$ENV{"ADDITIONAL_SDKS"}."/System/Library/Frameworks/System.framework/PrivateHeaders",
++	"-I".$ENV{"ADDITIONAL_SDKS"}."/System/Library/Frameworks/Kernel.framework/PrivateHeaders",
+ );
  
+ chomp(my $LIBTOOL = `xcrun -sdk "$ENV{'SDKROOT'}" -find libtool`);
